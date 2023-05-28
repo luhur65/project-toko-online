@@ -14,7 +14,7 @@
 
     <title>{{ $setting->website ?? env('WEBNAME') }} | {{ $setting->tagline ?? env('TAGLINE') }}</title>
 
-    <link rel="shortcut icon" href="{{ $setting->logo ?? env('LOGO') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/logo/' . $setting->logo ?? env('LOGO')) }}" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -69,7 +69,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img style="width: 2.5rem" class="img-fluid rounded-circle" src="{{ asset('/storage/logo/'.$setting->logo??env('LOGO')) }}" alt="" srcset="">
+                                    <img style="width: 2.5rem" class="img-fluid rounded-circle" src="{{ asset(env('USER_ICON')) }}" alt="" srcset="">
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

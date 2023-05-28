@@ -46,7 +46,7 @@ class SettingController extends Controller
             // ambil nama file
             $logo_name = \time() . Str::random(8) . '.' . $logo->getClientOriginalExtension();
             // upload ke folder public\img
-            $logo->storeAs('/storage/logo', $logo_name);
+            $logo->storeAs('/public/logo', $logo_name);
         } else {
             // jika tidak ada gambar yang diupload
             $logo_name = $setting->logo;
